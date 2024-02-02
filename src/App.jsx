@@ -1,7 +1,16 @@
+import useAuth from "./hooks/useAuth"
 import LoginForm from "./layouts/LoginForm"
 import RegisterForm from "./layouts/RegisterForm"
+import AppRouter from "./routers/AppRouter"
 
 function App() {
+  const { loading } =  useAuth();
+
+  if(loading){
+    return (
+      <p className="text-4xl text-primary">Loading...</p>
+    )
+  }
 
   return (
     <>
@@ -20,8 +29,7 @@ function App() {
         </label>
         <hr />
       </div>
-        <LoginForm />
-        <RegisterForm />
+        <AppRouter/>
     </>
   )
 }

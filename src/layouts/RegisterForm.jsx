@@ -85,7 +85,7 @@ export default function RegisterForm() {
 
                         <div className='label flex'>
                             <div className='flex gap-3'>
-                                <a className="link link-hover">Do you want to login?</a>
+                                <a className="link link-hover" href="/">Do you want to login?</a>
                                 <button className="btn">Register</button>
                             </div>
                         </div>
